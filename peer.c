@@ -1,5 +1,5 @@
 /*
-Program 2
+Program 3
 Authors: Eesha Gadhia, Jose Herrera
 Class: EECE 446
 Files to Submit: peer.c, Makefile
