@@ -1,0 +1,26 @@
+NEED TO FIX IN P2 PEER.C CODE:
+
+- (ALL FUNCTIONS) fix multiple sends, need only one
+	-> figure out how to create a packet with action and other data
+	-> for strings and the NULL terminator:
+		send(s, fname, strlen() + 1, 0) 
+		*the + 1 accounts for the NULL
+- (PUBLISH) account for fact that the file we're opening could have directories in them 
+	-> readdir() tells whether what we're looking at is a file or directory
+- (PUBLISH) save filename and count files in one go
+
+FETCH FUNCTION: fetch a file from another peer and save it locally
+
+(a) read a file name from the terminal,
+
+(b) send a SEARCH request to the registry for the file,
+
+(c) receive the peer information from the registry,
+
+(d) send a FETCH request to the identified peer,
+
+(e) and then receive and save the file information from the peer and save it to a file with the same name as the user requested in the local directory of the peer application.
+
+ISSUES/PROCESS:
+
+- how to send a search request from within the fetch function
